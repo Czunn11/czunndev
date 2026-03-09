@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>czunn.dev</title>
+<title>saltov.dev</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * {
@@ -684,57 +684,57 @@ footer {
 
 <nav>
   <div class="logo">&lt;czun.dev /&gt;</div>
-  <button class="hire-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <button class="hire-btn" data-i18n="hireMe" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
 </nav>
 
 <div class="hero" id="home">
   <div class="avail-badge">
     <div class="pulse-dot"></div>
-    Available for hire
+    <span data-i18n="availBadge">Available for hire</span>
   </div>
   <div class="hero-name">CZUNN</div>
-  <div class="hero-title">Roblox Studio Developer &amp; Scripter</div>
-  <p class="hero-desc">Crafting immersive Roblox experiences since 2021. 5 years of expertise in Lua scripting, game mechanics, and scalable systems.</p>
+  <div class="hero-title" data-i18n="heroTitle">Roblox Studio Developer &amp; Scripter</div>
+  <p class="hero-desc" data-i18n="heroDesc">Crafting immersive Roblox experiences since 2021. 5 years of expertise in Lua scripting, game mechanics, and scalable systems.</p>
   <div class="hero-stats">
     <div class="stat-card">
       <div>
-        <div class="stat-lbl">Total Visits Across All Games</div>
+        <div class="stat-lbl" data-i18n="totalVisits">Total Visits Across All Games</div>
         <div class="stat-val" id="total-visits">Yükleniyor...</div>
       </div>
       <div class="stat-icon">👁</div>
     </div>
     <div class="stat-card">
       <div>
-        <div class="stat-lbl">My Local Time · TR</div>
+        <div class="stat-lbl" data-i18n="localTime">My Local Time · TR</div>
         <div class="stat-val" id="clock">--:--:--</div>
       </div>
       <div class="stat-icon">🕐</div>
     </div>
   </div>
   <div class="hero-btns">
-    <button class="btn-p" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">View My Games</button>
-    <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+    <button class="btn-p" data-i18n="viewGames" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">View My Games</button>
+    <button class="btn-s" data-i18n="getInTouch" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
   </div>
 </div>
 
 <section class="sec reveal" id="games">
   <div class="sec-lbl">// portfolio</div>
-  <h2 class="sec-title">My <span class="ac">Games</span></h2>
-  <p class="sec-desc">Games I've created on Roblox</p>
+  <h2 class="sec-title"><span data-i18n="myGamesTitle">My</span> <span class="ac" data-i18n="games">Games</span></h2>
+  <p class="sec-desc" data-i18n="myGamesDesc">Games I've created on Roblox</p>
   <div class="games-grid" style="grid-template-columns: 1fr;">
     <div class="game-card" onclick="window.open('https://www.roblox.com/tr/games/124289335708519/1-Speed-Escape','_blank')" style="cursor:pointer">
       <div class="game-thumb g1" style="aspect-ratio:16/7; font-size:48px;">🏃
         <div class="play-ov">
           <button class="play-btn">
             <div class="rbx-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/></svg></div>
-            Play on Roblox
+            <span data-i18n="playOnRoblox">Play on Roblox</span>
           </button>
         </div>
       </div>
       <div class="game-info" style="padding:16px 18px">
         <div class="game-name" style="font-size:17px;white-space:normal">1 Speed Escape</div>
         <div class="game-views" id="game-views" style="font-size:14px; margin:6px 0">👁 Yükleniyor...</div>
-        <div class="game-desc" style="font-size:13px">Survive and escape — can you make it out in time?</div>
+        <div class="game-desc" data-i18n="gameDesc" style="font-size:13px">Survive and escape — can you make it out in time?</div>
       </div>
     </div>
   </div>
@@ -742,57 +742,57 @@ footer {
 
 <section class="sec reveal" id="skills">
   <div class="sec-lbl">// expertise</div>
-  <h2 class="sec-title">Skills &amp; <span class="ac">Systems</span></h2>
-  <p class="sec-desc">Specialized in building scalable, polished game systems for Roblox — from core mechanics to full monetization pipelines.</p>
+  <h2 class="sec-title"><span data-i18n="skillsTitle">Skills &amp;</span> <span class="ac" data-i18n="systems">Systems</span></h2>
+  <p class="sec-desc" data-i18n="skillsDesc">Specialized in building scalable, polished game systems for Roblox — from core mechanics to full monetization pipelines.</p>
   <div class="num-grid">
-    <div class="num-card"><div class="num-val">5+</div><div class="num-lbl">Years Experience</div></div>
-    <div class="num-card"><div class="num-val">19+</div><div class="num-lbl">Games Created</div></div>
-    <div class="num-card"><div class="num-val">64+</div><div class="num-lbl">Systems Built</div></div>
-    <div class="num-card"><div class="num-val">∞</div><div class="num-lbl">Lines of Lua</div></div>
+    <div class="num-card"><div class="num-val">5+</div><div class="num-lbl" data-i18n="yearsExp">Years Experience</div></div>
+    <div class="num-card"><div class="num-val">19+</div><div class="num-lbl" data-i18n="gamesCreated">Games Created</div></div>
+    <div class="num-card"><div class="num-val">64+</div><div class="num-lbl" data-i18n="systemsBuilt">Systems Built</div></div>
+    <div class="num-card"><div class="num-val">∞</div><div class="num-lbl" data-i18n="linesLua">Lines of Lua</div></div>
   </div>
   <div class="skill-card" style="animation-delay:0s">
-    <div class="skill-hd"><div class="sk-em">⚡</div><div class="sk-nm">Core Scripting</div></div>
-    <ul class="skill-ul"><li>Lua / Luau</li><li>ModuleScript Architecture</li><li>OOP Patterns</li><li>Performance Optimization</li></ul>
+    <div class="skill-hd"><div class="sk-em">⚡</div><div class="sk-nm" data-i18n="coreScripting">Core Scripting</div></div>
+    <ul class="skill-ul"><li data-i18n="s1">Lua / Luau</li><li data-i18n="s2">ModuleScript Architecture</li><li data-i18n="s3">OOP Patterns</li><li data-i18n="s4">Performance Optimization</li></ul>
   </div>
   <div class="skill-card hl" style="animation-delay:0.08s">
-    <div class="skill-hd"><div class="sk-em">🎮</div><div class="sk-nm cy">Game Systems</div></div>
-    <ul class="skill-ul"><li>Game Mechanics</li><li>Datastore &amp; Persistence</li><li>Pet Systems</li><li>Inventory Systems</li></ul>
+    <div class="skill-hd"><div class="sk-em">🎮</div><div class="sk-nm cy" data-i18n="gameSystems">Game Systems</div></div>
+    <ul class="skill-ul"><li data-i18n="s5">Game Mechanics</li><li data-i18n="s6">Datastore &amp; Persistence</li><li data-i18n="s7">Pet Systems</li><li data-i18n="s8">Inventory Systems</li></ul>
   </div>
   <div class="skill-card" style="animation-delay:0.16s">
-    <div class="skill-hd"><div class="sk-em">💰</div><div class="sk-nm">Monetization</div></div>
-    <ul class="skill-ul"><li>Shop Systems</li><li>Lucky Mechanics (RNG)</li><li>Crates / Cases / Boxes</li><li>Premium Features</li></ul>
+    <div class="skill-hd"><div class="sk-em">💰</div><div class="sk-nm" data-i18n="monetization">Monetization</div></div>
+    <ul class="skill-ul"><li data-i18n="s9">Shop Systems</li><li data-i18n="s10">Lucky Mechanics (RNG)</li><li data-i18n="s11">Crates / Cases / Boxes</li><li data-i18n="s12">Premium Features</li></ul>
   </div>
   <div class="skill-card" style="animation-delay:0.24s">
-    <div class="skill-hd"><div class="sk-em">🔄</div><div class="sk-nm">Retention</div></div>
-    <ul class="skill-ul"><li>Daily Rewards</li><li>Wheel of Fortune</li><li>Quest Systems</li><li>Trophy Road</li></ul>
+    <div class="skill-hd"><div class="sk-em">🔄</div><div class="sk-nm" data-i18n="retention">Retention</div></div>
+    <ul class="skill-ul"><li data-i18n="s13">Daily Rewards</li><li data-i18n="s14">Wheel of Fortune</li><li data-i18n="s15">Quest Systems</li><li data-i18n="s16">Trophy Road</li></ul>
   </div>
   <div class="skill-card" style="animation-delay:0.32s">
-    <div class="skill-hd"><div class="sk-em">🎨</div><div class="sk-nm">UI/UX</div></div>
-    <ul class="skill-ul"><li>Polished Interfaces</li><li>Tweening &amp; Animations</li><li>Player Interactions</li><li>Responsive GUIs</li></ul>
+    <div class="skill-hd"><div class="sk-em">🎨</div><div class="sk-nm" data-i18n="uiux">UI/UX</div></div>
+    <ul class="skill-ul"><li data-i18n="s17">Polished Interfaces</li><li data-i18n="s18">Tweening &amp; Animations</li><li data-i18n="s19">Player Interactions</li><li data-i18n="s20">Responsive GUIs</li></ul>
   </div>
   <div class="skill-card hl" style="animation-delay:0.4s">
-    <div class="skill-hd"><div class="sk-em">🔧</div><div class="sk-nm cy">Systems</div></div>
-    <ul class="skill-ul"><li>Round Systems</li><li>Random Systems</li><li>Group Teleportation</li><li>Anti-Cheat &amp; Security</li></ul>
+    <div class="skill-hd"><div class="sk-em">🔧</div><div class="sk-nm cy" data-i18n="systemsCard">Systems</div></div>
+    <ul class="skill-ul"><li data-i18n="s21">Round Systems</li><li data-i18n="s22">Random Systems</li><li data-i18n="s23">Group Teleportation</li><li data-i18n="s24">Anti-Cheat &amp; Security</li></ul>
   </div>
 </section>
 
 <section class="sec reveal" id="contact">
   <div class="sec-lbl">// contact</div>
-  <h2 class="sec-title">Let's Work <span class="ac">Together</span></h2>
-  <p class="sec-desc">Looking for a skilled Roblox scripter? I'm available for freelance projects, collaborations, and full-time game development roles.</p>
+  <h2 class="sec-title"><span data-i18n="letsWork">Let's Work</span> <span class="ac" data-i18n="together">Together</span></h2>
+  <p class="sec-desc" data-i18n="contactDesc">Looking for a skilled Roblox scripter? I'm available for freelance projects, collaborations, and full-time game development roles.</p>
   <a class="contact-card" href="https://discord.com/users/czunn" target="_blank">
     <div class="cc-icon">💬</div>
-    <div class="cc-info"><div class="cc-name">Discord</div><div class="cc-handle">czunn</div><div class="cc-note">DMs open</div></div>
+    <div class="cc-info"><div class="cc-name">Discord</div><div class="cc-handle">czunn</div><div class="cc-note" data-i18n="dmsOpen">DMs open</div></div>
     <div class="cc-arr">↗</div>
   </a>
   <a class="contact-card" href="https://youtube.com/@czunn1?si=5a07PqCstIfptvZT" target="_blank">
     <div class="cc-icon">▶️</div>
-    <div class="cc-info"><div class="cc-name">YouTube</div><div class="cc-handle">@czunn1</div><div class="cc-note">Dev content &amp; demos</div></div>
+    <div class="cc-info"><div class="cc-name">YouTube</div><div class="cc-handle">@czunn1</div><div class="cc-note" data-i18n="ytNote">Dev content &amp; demos</div></div>
     <div class="cc-arr">↗</div>
   </a>
   <a class="contact-card" href="https://www.roblox.com/tr/users/1560744729/profile" target="_blank">
     <div class="cc-icon">🟥</div>
-    <div class="cc-info"><div class="cc-name">Roblox</div><div class="cc-handle">czun (1560744729)</div><div class="cc-note">View my profile</div></div>
+    <div class="cc-info"><div class="cc-name">Roblox</div><div class="cc-handle">czunn (1560744729)</div><div class="cc-note" data-i18n="rbxNote">View my profile</div></div>
     <div class="cc-arr">↗</div>
   </a>
 </section>
@@ -803,7 +803,7 @@ footer {
     <a href="https://www.roblox.com/tr/users/1560744729/profile" target="_blank">Roblox</a>
     <a href="https://youtube.com/@czunn1?si=5a07PqCstIfptvZT" target="_blank">YouTube</a>
   </div>
-  <div class="ft-copy">© 2026 Czun. Roblox Developer</div>
+  <div class="ft-copy" data-i18n="footerCopy">© 2026 Czunn. Roblox Developer</div>
 </footer>
 
 <script>
@@ -817,33 +817,202 @@ tick();
 setInterval(tick, 1000);
 
 async function loadVisits() {
+  const placeId = '124289335708519';
+  const proxy = 'https://corsproxy.io/?url=';
+  const fmt = n => {
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+    if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+    return n.toString();
+  };
+  const setVals = visits => {
+    document.getElementById('total-visits').textContent = visits.toLocaleString('tr-TR');
+    document.getElementById('game-views').textContent = '👁 ' + fmt(visits);
+  };
   try {
-    const placeId = '124289335708519';
-    const uniRes = await fetch('https://apis.roblox.com/universes/v1/places/' + placeId + '/universe');
+    const uniUrl = 'https://apis.roblox.com/universes/v1/places/' + placeId + '/universe';
+    const uniRes = await fetch(proxy + encodeURIComponent(uniUrl));
     const uniData = await uniRes.json();
     const universeId = uniData.universeId;
-    if (!universeId) throw new Error('no universe');
-    const res = await fetch('https://games.roblox.com/v1/games?universeIds=' + universeId);
-    const data = await res.json();
-    if (data && data.data && data.data[0]) {
-      const visits = data.data[0].visits || 0;
-      const fmt = n => {
-        if (n >= 1000000) return (n / 1000000).toFixed(2) + 'M';
-        if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
-        return n.toString();
-      };
-      document.getElementById('total-visits').textContent = visits.toLocaleString('tr-TR');
-      document.getElementById('game-views').textContent = '👁 ' + fmt(visits);
-    }
+    if (!universeId) throw new Error();
+    const gameUrl = 'https://games.roblox.com/v1/games?universeIds=' + universeId;
+    const gameRes = await fetch(proxy + encodeURIComponent(gameUrl));
+    const gameData = await gameRes.json();
+    if (gameData?.data?.[0]) setVals(gameData.data[0].visits || 0);
   } catch(e) {
-    document.getElementById('total-visits').textContent = '—';
-    document.getElementById('game-views').textContent = '👁 —';
+    try {
+      const uniUrl = 'https://apis.roblox.com/universes/v1/places/' + placeId + '/universe';
+      const r1 = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent(uniUrl));
+      const d1 = JSON.parse((await r1.json()).contents);
+      const universeId = d1.universeId;
+      if (!universeId) throw new Error();
+      const gameUrl = 'https://games.roblox.com/v1/games?universeIds=' + universeId;
+      const r2 = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent(gameUrl));
+      const d2 = JSON.parse((await r2.json()).contents);
+      if (d2?.data?.[0]) setVals(d2.data[0].visits || 0);
+    } catch(e2) {
+      document.getElementById('total-visits').textContent = '—';
+      document.getElementById('game-views').textContent = '👁 —';
+    }
   }
 }
 loadVisits();
-setInterval(loadVisits, 60000);
+setInterval(loadVisits, 120000);
 
 
+
+const translations = {
+  tr: {
+    hireMe: 'İşe Al', availBadge: 'Kiralanabilir', heroTitle: 'Roblox Studio Geliştirici & Scriptçi',
+    heroDesc: '2021\'den beri sürükleyici Roblox deneyimleri geliştiriyorum. Lua scripting, oyun mekaniği ve ölçeklenebilir sistemlerde 5 yıllık uzmanlık.',
+    totalVisits: 'Tüm Oyunlardaki Toplam Ziyaret', localTime: 'Yerel Saat · TR',
+    viewGames: 'Oyunlarımı Gör', getInTouch: 'İletişime Geç',
+    myGamesTitle: 'Oyunlarım', games: '', myGamesDesc: 'Roblox\'ta oluşturduğum oyunlar',
+    playOnRoblox: 'Roblox\'ta Oyna', gameDesc: 'Hayatta kal ve kaç — zamanında çıkabilecek misin?',
+    skillsTitle: 'Beceriler &', systems: 'Sistemler',
+    skillsDesc: 'Roblox için ölçeklenebilir, cilalı oyun sistemleri geliştirme konusunda uzmanlaşmış — temel mekaniklerden tam para kazanma süreçlerine kadar.',
+    yearsExp: 'Yıl Deneyim', gamesCreated: 'Oyun Yapıldı', systemsBuilt: 'Sistem Kuruldu', linesLua: 'Lua Satırı',
+    coreScripting: 'Temel Scripting', gameSystems: 'Oyun Sistemleri', monetization: 'Para Kazanma',
+    retention: 'Oyuncu Tutma', uiux: 'Arayüz/UX', systemsCard: 'Sistemler',
+    s1:'Lua / Luau', s2:'ModulScript Mimarisi', s3:'OOP Kalıpları', s4:'Performans Optimizasyonu',
+    s5:'Oyun Mekaniği', s6:'Datastore & Kalıcılık', s7:'Pet Sistemleri', s8:'Envanter Sistemleri',
+    s9:'Mağaza Sistemleri', s10:'Şans Mekaniği (RNG)', s11:'Kasa / Kutu Sistemleri', s12:'Premium Özellikler',
+    s13:'Günlük Ödüller', s14:'Çark-ı Felek', s15:'Görev Sistemleri', s16:'Kupa Yolu',
+    s17:'Cilalı Arayüzler', s18:'Tweening & Animasyonlar', s19:'Oyuncu Etkileşimleri', s20:'Responsive GUI\'ler',
+    s21:'Tur Sistemleri', s22:'Rastgele Sistemler', s23:'Grup Teleportasyonu', s24:'Anti-Hile & Güvenlik',
+    letsWork: 'Birlikte', together: 'Çalışalım',
+    contactDesc: 'Yetenekli bir Roblox scriptçisi mi arıyorsunuz? Freelance projeler, iş birlikleri ve tam zamanlı oyun geliştirme rolleri için müsaitim.',
+    dmsOpen: 'DM\'ler açık', ytNote: 'Geliştirici içerikleri & demolar', rbxNote: 'Profilimi görüntüle',
+    footerCopy: '© 2026 Czunn. Roblox Geliştirici'
+  },
+  de: {
+    hireMe: 'Einstellen', availBadge: 'Verfügbar', heroTitle: 'Roblox Studio Entwickler & Scripter',
+    heroDesc: 'Seit 2021 entwickle ich immersive Roblox-Erlebnisse. 5 Jahre Expertise in Lua-Scripting, Spielmechanik und skalierbaren Systemen.',
+    totalVisits: 'Gesamtbesuche aller Spiele', localTime: 'Ortszeit · TR',
+    viewGames: 'Meine Spiele', getInTouch: 'Kontakt aufnehmen',
+    myGamesTitle: 'Meine', games: 'Spiele', myGamesDesc: 'Spiele, die ich auf Roblox erstellt habe',
+    playOnRoblox: 'Auf Roblox spielen', gameDesc: 'Überlebe und entkamme — schaffst du es rechtzeitig?',
+    skillsTitle: 'Fähigkeiten &', systems: 'Systeme',
+    skillsDesc: 'Spezialisiert auf skalierbare, polierte Spielsysteme für Roblox — von Kernmechaniken bis zu vollständigen Monetarisierungspipelines.',
+    yearsExp: 'Jahre Erfahrung', gamesCreated: 'Spiele erstellt', systemsBuilt: 'Systeme gebaut', linesLua: 'Zeilen Lua',
+    coreScripting: 'Kern-Scripting', gameSystems: 'Spielsysteme', monetization: 'Monetarisierung',
+    retention: 'Spielerbindung', uiux: 'UI/UX', systemsCard: 'Systeme',
+    s1:'Lua / Luau', s2:'ModulScript-Architektur', s3:'OOP-Muster', s4:'Performance-Optimierung',
+    s5:'Spielmechanik', s6:'Datenspeicher & Persistenz', s7:'Haustier-Systeme', s8:'Inventarsysteme',
+    s9:'Shop-Systeme', s10:'Glücksmechanik (RNG)', s11:'Kisten / Cases / Boxen', s12:'Premium-Features',
+    s13:'Tägliche Belohnungen', s14:'Glücksrad', s15:'Quest-Systeme', s16:'Trophäenweg',
+    s17:'Polierte Interfaces', s18:'Tweening & Animationen', s19:'Spielerinteraktionen', s20:'Responsive GUIs',
+    s21:'Rundensysteme', s22:'Zufallssysteme', s23:'Gruppen-Teleportation', s24:'Anti-Cheat & Sicherheit',
+    letsWork: 'Lass uns', together: 'zusammenarbeiten',
+    contactDesc: 'Suchen Sie einen erfahrenen Roblox-Scripter? Ich bin verfügbar für Freelance-Projekte, Kooperationen und Vollzeitstellen.',
+    dmsOpen: 'DMs offen', ytNote: 'Entwicklerinhalte & Demos', rbxNote: 'Mein Profil ansehen',
+    footerCopy: '© 2026 Czunn. Roblox-Entwickler'
+  },
+  fr: {
+    hireMe: 'Recruter', availBadge: 'Disponible', heroTitle: 'Développeur & Scripteur Roblox Studio',
+    heroDesc: 'Je crée des expériences Roblox immersives depuis 2021. 5 ans d\'expertise en scripting Lua, mécanique de jeu et systèmes évolutifs.',
+    totalVisits: 'Total des visites tous jeux', localTime: 'Heure locale · TR',
+    viewGames: 'Voir mes jeux', getInTouch: 'Me contacter',
+    myGamesTitle: 'Mes', games: 'Jeux', myGamesDesc: 'Jeux que j\'ai créés sur Roblox',
+    playOnRoblox: 'Jouer sur Roblox', gameDesc: 'Survie et évasion — peux-tu t\'en sortir à temps?',
+    skillsTitle: 'Compétences &', systems: 'Systèmes',
+    skillsDesc: 'Spécialisé dans la création de systèmes de jeu évolutifs et soignés pour Roblox — des mécaniques de base aux pipelines de monétisation.',
+    yearsExp: 'Ans d\'expérience', gamesCreated: 'Jeux créés', systemsBuilt: 'Systèmes construits', linesLua: 'Lignes Lua',
+    coreScripting: 'Scripting de base', gameSystems: 'Systèmes de jeu', monetization: 'Monétisation',
+    retention: 'Rétention', uiux: 'UI/UX', systemsCard: 'Systèmes',
+    s1:'Lua / Luau', s2:'Architecture ModuleScript', s3:'Modèles OOP', s4:'Optimisation des performances',
+    s5:'Mécanique de jeu', s6:'Datastore & Persistance', s7:'Systèmes de Pets', s8:'Systèmes d\'inventaire',
+    s9:'Systèmes de boutique', s10:'Mécanique de chance (RNG)', s11:'Caisses / Cases / Boîtes', s12:'Fonctionnalités Premium',
+    s13:'Récompenses quotidiennes', s14:'Roue de la fortune', s15:'Systèmes de quêtes', s16:'Route des trophées',
+    s17:'Interfaces soignées', s18:'Tweening & Animations', s19:'Interactions joueurs', s20:'GUIs réactives',
+    s21:'Systèmes de rounds', s22:'Systèmes aléatoires', s23:'Téléportation de groupe', s24:'Anti-triche & Sécurité',
+    letsWork: 'Travaillons', together: 'Ensemble',
+    contactDesc: 'Vous cherchez un scripteur Roblox qualifié? Je suis disponible pour des projets freelance, des collaborations et des rôles à temps plein.',
+    dmsOpen: 'DMs ouverts', ytNote: 'Contenu dev & démos', rbxNote: 'Voir mon profil',
+    footerCopy: '© 2026 Czunn. Développeur Roblox'
+  },
+  es: {
+    hireMe: 'Contratar', availBadge: 'Disponible', heroTitle: 'Desarrollador & Scripter de Roblox Studio',
+    heroDesc: 'Creando experiencias inmersivas en Roblox desde 2021. 5 años de experiencia en scripting Lua, mecánicas de juego y sistemas escalables.',
+    totalVisits: 'Total de visitas en todos los juegos', localTime: 'Hora local · TR',
+    viewGames: 'Ver mis juegos', getInTouch: 'Contactar',
+    myGamesTitle: 'Mis', games: 'Juegos', myGamesDesc: 'Juegos que he creado en Roblox',
+    playOnRoblox: 'Jugar en Roblox', gameDesc: '¿Puedes sobrevivir y escapar a tiempo?',
+    skillsTitle: 'Habilidades &', systems: 'Sistemas',
+    skillsDesc: 'Especializado en crear sistemas de juego escalables para Roblox — desde mecánicas básicas hasta pipelines de monetización.',
+    yearsExp: 'Años de experiencia', gamesCreated: 'Juegos creados', systemsBuilt: 'Sistemas construidos', linesLua: 'Líneas de Lua',
+    coreScripting: 'Scripting básico', gameSystems: 'Sistemas de juego', monetization: 'Monetización',
+    retention: 'Retención', uiux: 'UI/UX', systemsCard: 'Sistemas',
+    s1:'Lua / Luau', s2:'Arquitectura ModuleScript', s3:'Patrones OOP', s4:'Optimización de rendimiento',
+    s5:'Mecánicas de juego', s6:'Datastore & Persistencia', s7:'Sistemas de Mascotas', s8:'Sistemas de inventario',
+    s9:'Sistemas de tienda', s10:'Mecánica de suerte (RNG)', s11:'Cajas / Cases', s12:'Funciones Premium',
+    s13:'Recompensas diarias', s14:'Ruleta de la fortuna', s15:'Sistemas de misiones', s16:'Camino de trofeos',
+    s17:'Interfaces pulidas', s18:'Tweening & Animaciones', s19:'Interacciones de jugadores', s20:'GUIs responsivas',
+    s21:'Sistemas de rondas', s22:'Sistemas aleatorios', s23:'Teletransportación grupal', s24:'Anti-trampas & Seguridad',
+    letsWork: 'Trabajemos', together: 'Juntos',
+    contactDesc: '¿Buscas un scripter Roblox cualificado? Estoy disponible para proyectos freelance, colaboraciones y roles a tiempo completo.',
+    dmsOpen: 'DMs abiertos', ytNote: 'Contenido dev & demos', rbxNote: 'Ver mi perfil',
+    footerCopy: '© 2026 Czunn. Desarrollador Roblox'
+  },
+  ru: {
+    hireMe: 'Нанять', availBadge: 'Доступен', heroTitle: 'Разработчик и скриптер Roblox Studio',
+    heroDesc: 'Создаю захватывающие Roblox-опыты с 2021 года. 5 лет опыта в Lua-скриптинге, игровой механике и масштабируемых системах.',
+    totalVisits: 'Всего посещений во всех играх', localTime: 'Местное время · TR',
+    viewGames: 'Мои игры', getInTouch: 'Связаться',
+    myGamesTitle: 'Мои', games: 'Игры', myGamesDesc: 'Игры, созданные мной на Roblox',
+    playOnRoblox: 'Играть в Roblox', gameDesc: 'Выживи и сбеги — успеешь вовремя?',
+    skillsTitle: 'Навыки &', systems: 'Системы',
+    skillsDesc: 'Специализируюсь на создании масштабируемых игровых систем для Roblox — от базовой механики до монетизации.',
+    yearsExp: 'Лет опыта', gamesCreated: 'Игр создано', systemsBuilt: 'Систем построено', linesLua: 'Строк Lua',
+    coreScripting: 'Основной скриптинг', gameSystems: 'Игровые системы', monetization: 'Монетизация',
+    retention: 'Удержание', uiux: 'UI/UX', systemsCard: 'Системы',
+    s1:'Lua / Luau', s2:'Архитектура ModuleScript', s3:'ООП-паттерны', s4:'Оптимизация производительности',
+    s5:'Игровая механика', s6:'Datastore & Сохранение', s7:'Системы питомцев', s8:'Системы инвентаря',
+    s9:'Системы магазина', s10:'Механика удачи (RNG)', s11:'Ящики / Кейсы', s12:'Премиум-функции',
+    s13:'Ежедневные награды', s14:'Колесо фортуны', s15:'Системы заданий', s16:'Дорога трофеев',
+    s17:'Отполированные интерфейсы', s18:'Tweening & Анимации', s19:'Взаимодействие с игроками', s20:'Адаптивные GUI',
+    s21:'Системы раундов', s22:'Случайные системы', s23:'Групповая телепортация', s24:'Анти-чит & Безопасность',
+    letsWork: 'Давайте работать', together: 'Вместе',
+    contactDesc: 'Ищете опытного Roblox-скриптера? Я доступен для фриланс-проектов, совместной работы и полной занятости.',
+    dmsOpen: 'DM открыты', ytNote: 'Контент разработчика & демо', rbxNote: 'Посмотреть профиль',
+    footerCopy: '© 2026 Czunn. Roblox разработчик'
+  },
+  ar: {
+    hireMe: 'توظيف', availBadge: 'متاح للتوظيف', heroTitle: 'مطور ومبرمج Roblox Studio',
+    heroDesc: 'أصنع تجارب Roblox غامرة منذ 2021. خبرة 5 سنوات في Lua scripting وميكانيكا الألعاب والأنظمة القابلة للتطوير.',
+    totalVisits: 'إجمالي الزيارات عبر جميع الألعاب', localTime: 'التوقيت المحلي · TR',
+    viewGames: 'عرض ألعابي', getInTouch: 'تواصل معي',
+    myGamesTitle: 'ألعابي', games: '', myGamesDesc: 'الألعاب التي أنشأتها على Roblox',
+    playOnRoblox: 'العب على Roblox', gameDesc: 'تحمل وهرب — هل يمكنك الخروج في الوقت المناسب؟',
+    skillsTitle: 'المهارات &', systems: 'الأنظمة',
+    skillsDesc: 'متخصص في بناء أنظمة ألعاب قابلة للتطوير لـ Roblox — من الميكانيكا الأساسية إلى خطوط تحقيق الدخل.',
+    yearsExp: 'سنوات خبرة', gamesCreated: 'لعبة مُنشأة', systemsBuilt: 'نظام مبني', linesLua: 'سطر Lua',
+    coreScripting: 'البرمجة الأساسية', gameSystems: 'أنظمة اللعبة', monetization: 'تحقيق الدخل',
+    retention: 'الاحتفاظ باللاعبين', uiux: 'واجهة/تجربة المستخدم', systemsCard: 'الأنظمة',
+    s1:'Lua / Luau', s2:'هندسة ModuleScript', s3:'أنماط OOP', s4:'تحسين الأداء',
+    s5:'ميكانيكا اللعبة', s6:'Datastore والاستمرارية', s7:'أنظمة الحيوانات', s8:'أنظمة المخزون',
+    s9:'أنظمة المتجر', s10:'ميكانيكا الحظ (RNG)', s11:'الصناديق والحقائب', s12:'الميزات المميزة',
+    s13:'المكافآت اليومية', s14:'عجلة الحظ', s15:'أنظمة المهام', s16:'درب الكؤوس',
+    s17:'واجهات مصقولة', s18:'Tweening والرسوم المتحركة', s19:'تفاعلات اللاعبين', s20:'واجهات متجاوبة',
+    s21:'أنظمة الجولات', s22:'الأنظمة العشوائية', s23:'نقل المجموعات', s24:'مكافحة الغش والأمان',
+    letsWork: 'لنعمل', together: 'معاً',
+    contactDesc: 'هل تبحث عن مبرمج Roblox ماهر؟ أنا متاح لمشاريع مستقلة وتعاون ودور تطوير ألعاب بدوام كامل.',
+    dmsOpen: 'الرسائل مفتوحة', ytNote: 'محتوى المطور وعروض', rbxNote: 'عرض ملفي الشخصي',
+    footerCopy: '© 2026 Czunn. مطور Roblox'
+  }
+};
+
+function applyLang(lang) {
+  const t = translations[lang] || translations['en'] || {};
+  if (!t || Object.keys(t).length === 0) return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  if (lang === 'ar') document.body.style.direction = 'rtl';
+}
+
+const userLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+applyLang(userLang);
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -869,3 +1038,4 @@ for (let i = 0; i < 20; i++) {
 </script>
 </body>
 </html>
+
