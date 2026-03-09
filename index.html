@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>czunn.dev</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0c0c0e;
+  --bg2: #141417;
+  --bg3: #1c1c20;
+  --cyan: #4dd9ff;
+  --muted: #7a7a90;
+  --text: #f0f0f5;
+  --border: #252530;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(12, 12, 14, 0.93);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cyan);
+  font-size: 16px;
+}
+
+.hire-btn {
+  background: var(--cyan);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  padding: 11px 26px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.hire-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.04);
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 64px 24px 60px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(77, 217, 255, 0.13) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(77, 217, 255, 0.05) 0%, transparent 60%);
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(100vh); opacity: 0; }
+  10% { opacity: 0.25; }
+  90% { opacity: 0.25; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+.avail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--cyan);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(77, 217, 255, 0.5); }
+  50% { box-shadow: 0 0 0 7px rgba(77, 217, 255, 0); }
+}
+
+.hero-name {
+  font-size: 82px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  line-height: 1;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--cyan);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.hero-desc {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 380px;
+  margin: 0 auto 38px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 440px;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.stat-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.stat-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--cyan);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.hero-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.btn-p {
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  padding: 16px;
+  border-radius: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.btn-p:hover {
+  opacity: 0.87;
+  transform: translateY(-2px);
+}
+
+.btn-s {
+  background: var(--bg2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.btn-s:hover {
+  border-color: rgba(77, 217, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.sec {
+  padding: 56px 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.sec-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cyan);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.sec-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.sec-title .ac {
+  color: var(--cyan);
+}
+
+.sec-desc {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 34px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 13px;
+  border-radius: 13px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab.on {
+  background: var(--cyan);
+  color: #000;
+}
+
+.tab.off {
+  background: var(--bg2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.tab.off:hover {
+  border-color: rgba(77, 217, 255, 0.4);
+  color: var(--text);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.game-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.game-card:hover {
+  border-color: rgba(77, 217, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+.game-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  overflow: hidden;
+}
+
+.play-ov {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.game-card:hover .play-ov {
+  opacity: 1;
+}
+
+.play-btn {
+  background: var(--cyan);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.rbx-icon {
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rbx-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: #fff;
+}
+
+.g1 { background: linear-gradient(135deg, #1a3020, #2a1810); }
+.g2 { background: linear-gradient(135deg, #102030, #301020); }
+.g3 { background: linear-gradient(135deg, #201010, #101030); }
+.g4 { background: linear-gradient(135deg, #202010, #102020); }
+.g5 { background: linear-gradient(135deg, #103010, #303010); }
+.g6 { background: linear-gradient(135deg, #301010, #103030); }
+.g7 { background: linear-gradient(135deg, #201020, #102010); }
+.g8 { background: linear-gradient(135deg, #102010, #201030); }
+
+.game-info {
+  padding: 12px 13px;
+}
+
+.game-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game-views {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+
+.game-desc {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.info-note {
+  margin-top: 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 15px 17px;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.info-note strong {
+  color: var(--text);
+}
+
+.num-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin-bottom: 34px;
+}
+
+.num-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px 18px;
+  text-align: center;
+}
+
+.num-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+  margin-bottom: 9px;
+}
+
+.num-lbl {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.skill-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 14px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  transform: translateX(0) scale(1);
+  will-change: transform;
+}
+
+.skill-card:hover {
+  border-color: rgba(77, 217, 255, 0.4);
+  transform: translateX(6px) scale(1.02);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+}
+
+.skill-card.hl:hover {
+  border-color: var(--cyan);
+  transform: translateX(6px) scale(1.02);
+  box-shadow: 0 6px 28px rgba(77, 217, 255, 0.18);
+}
+
+.skill-hd {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.sk-em {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.sk-nm {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sk-nm.cy {
+  color: var(--cyan);
+}
+
+.skill-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.skill-ul li {
+  color: var(--muted);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.skill-ul li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--cyan);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin-bottom: 13px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-card:hover {
+  border-color: rgba(77, 217, 255, 0.5);
+  transform: translateX(4px);
+}
+
+.cc-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--bg3);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.cc-info {
+  flex: 1;
+}
+
+.cc-name {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.cc-handle {
+  color: var(--cyan);
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.cc-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.cc-arr {
+  color: var(--muted);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 38px 24px 30px;
+  text-align: center;
+}
+
+.ft-logo {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cyan);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.ft-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.ft-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.ft-links a:hover {
+  color: var(--text);
+}
+
+.ft-copy {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<div class="particles" id="pts"></div>
+
+<nav>
+  <div class="logo">&lt;czun.dev /&gt;</div>
+  <button class="hire-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+</nav>
+
+<div class="hero" id="home">
+  <div class="avail-badge">
+    <div class="pulse-dot"></div>
+    Available for hire
+  </div>
+  <div class="hero-name">CZUNN</div>
+  <div class="hero-title">Roblox Studio Developer &amp; Scripter</div>
+  <p class="hero-desc">Crafting immersive Roblox experiences since 2021. 5 years of expertise in Lua scripting, game mechanics, and scalable systems.</p>
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div>
+        <div class="stat-lbl">Total Visits Across All Games</div>
+        <div class="stat-val" id="total-visits">Yükleniyor...</div>
+      </div>
+      <div class="stat-icon">👁</div>
+    </div>
+    <div class="stat-card">
+      <div>
+        <div class="stat-lbl">My Local Time · TR</div>
+        <div class="stat-val" id="clock">--:--:--</div>
+      </div>
+      <div class="stat-icon">🕐</div>
+    </div>
+  </div>
+  <div class="hero-btns">
+    <button class="btn-p" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">View My Games</button>
+    <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+  </div>
+</div>
+
+<section class="sec reveal" id="games">
+  <div class="sec-lbl">// portfolio</div>
+  <h2 class="sec-title">My <span class="ac">Games</span></h2>
+  <p class="sec-desc">Games I've created on Roblox</p>
+  <div class="games-grid" style="grid-template-columns: 1fr;">
+    <div class="game-card" onclick="window.open('https://www.roblox.com/tr/games/124289335708519/1-Speed-Escape','_blank')" style="cursor:pointer">
+      <div class="game-thumb g1" style="aspect-ratio:16/7; font-size:48px;">🏃
+        <div class="play-ov">
+          <button class="play-btn">
+            <div class="rbx-icon"><svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/></svg></div>
+            Play on Roblox
+          </button>
+        </div>
+      </div>
+      <div class="game-info" style="padding:16px 18px">
+        <div class="game-name" style="font-size:17px;white-space:normal">1 Speed Escape</div>
+        <div class="game-views" id="game-views" style="font-size:14px; margin:6px 0">👁 Yükleniyor...</div>
+        <div class="game-desc" style="font-size:13px">Survive and escape — can you make it out in time?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reveal" id="skills">
+  <div class="sec-lbl">// expertise</div>
+  <h2 class="sec-title">Skills &amp; <span class="ac">Systems</span></h2>
+  <p class="sec-desc">Specialized in building scalable, polished game systems for Roblox — from core mechanics to full monetization pipelines.</p>
+  <div class="num-grid">
+    <div class="num-card"><div class="num-val">5+</div><div class="num-lbl">Years Experience</div></div>
+    <div class="num-card"><div class="num-val">19+</div><div class="num-lbl">Games Created</div></div>
+    <div class="num-card"><div class="num-val">64+</div><div class="num-lbl">Systems Built</div></div>
+    <div class="num-card"><div class="num-val">∞</div><div class="num-lbl">Lines of Lua</div></div>
+  </div>
+  <div class="skill-card" style="animation-delay:0s">
+    <div class="skill-hd"><div class="sk-em">⚡</div><div class="sk-nm">Core Scripting</div></div>
+    <ul class="skill-ul"><li>Lua / Luau</li><li>ModuleScript Architecture</li><li>OOP Patterns</li><li>Performance Optimization</li></ul>
+  </div>
+  <div class="skill-card hl" style="animation-delay:0.08s">
+    <div class="skill-hd"><div class="sk-em">🎮</div><div class="sk-nm cy">Game Systems</div></div>
+    <ul class="skill-ul"><li>Game Mechanics</li><li>Datastore &amp; Persistence</li><li>Pet Systems</li><li>Inventory Systems</li></ul>
+  </div>
+  <div class="skill-card" style="animation-delay:0.16s">
+    <div class="skill-hd"><div class="sk-em">💰</div><div class="sk-nm">Monetization</div></div>
+    <ul class="skill-ul"><li>Shop Systems</li><li>Lucky Mechanics (RNG)</li><li>Crates / Cases / Boxes</li><li>Premium Features</li></ul>
+  </div>
+  <div class="skill-card" style="animation-delay:0.24s">
+    <div class="skill-hd"><div class="sk-em">🔄</div><div class="sk-nm">Retention</div></div>
+    <ul class="skill-ul"><li>Daily Rewards</li><li>Wheel of Fortune</li><li>Quest Systems</li><li>Trophy Road</li></ul>
+  </div>
+  <div class="skill-card" style="animation-delay:0.32s">
+    <div class="skill-hd"><div class="sk-em">🎨</div><div class="sk-nm">UI/UX</div></div>
+    <ul class="skill-ul"><li>Polished Interfaces</li><li>Tweening &amp; Animations</li><li>Player Interactions</li><li>Responsive GUIs</li></ul>
+  </div>
+  <div class="skill-card hl" style="animation-delay:0.4s">
+    <div class="skill-hd"><div class="sk-em">🔧</div><div class="sk-nm cy">Systems</div></div>
+    <ul class="skill-ul"><li>Round Systems</li><li>Random Systems</li><li>Group Teleportation</li><li>Anti-Cheat &amp; Security</li></ul>
+  </div>
+</section>
+
+<section class="sec reveal" id="contact">
+  <div class="sec-lbl">// contact</div>
+  <h2 class="sec-title">Let's Work <span class="ac">Together</span></h2>
+  <p class="sec-desc">Looking for a skilled Roblox scripter? I'm available for freelance projects, collaborations, and full-time game development roles.</p>
+  <a class="contact-card" href="https://discord.com/users/czunn" target="_blank">
+    <div class="cc-icon">💬</div>
+    <div class="cc-info"><div class="cc-name">Discord</div><div class="cc-handle">czunn</div><div class="cc-note">DMs open</div></div>
+    <div class="cc-arr">↗</div>
+  </a>
+  <a class="contact-card" href="https://youtube.com/@czunn1?si=5a07PqCstIfptvZT" target="_blank">
+    <div class="cc-icon">▶️</div>
+    <div class="cc-info"><div class="cc-name">YouTube</div><div class="cc-handle">@czunn1</div><div class="cc-note">Dev content &amp; demos</div></div>
+    <div class="cc-arr">↗</div>
+  </a>
+  <a class="contact-card" href="https://www.roblox.com/tr/users/1560744729/profile" target="_blank">
+    <div class="cc-icon">🟥</div>
+    <div class="cc-info"><div class="cc-name">Roblox</div><div class="cc-handle">czun (1560744729)</div><div class="cc-note">View my profile</div></div>
+    <div class="cc-arr">↗</div>
+  </a>
+</section>
+
+<footer>
+  <div class="ft-logo">&lt;czun.dev /&gt;</div>
+  <div class="ft-links">
+    <a href="https://www.roblox.com/tr/users/1560744729/profile" target="_blank">Roblox</a>
+    <a href="https://youtube.com/@czunn1?si=5a07PqCstIfptvZT" target="_blank">YouTube</a>
+  </div>
+  <div class="ft-copy">© 2026 Czun. Roblox Developer</div>
+</footer>
+
+<script>
+function tick() {
+  const now = new Date();
+  const tr = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Istanbul' }));
+  const p = n => String(n).padStart(2, '0');
+  document.getElementById('clock').textContent = p(tr.getHours()) + ':' + p(tr.getMinutes()) + ':' + p(tr.getSeconds());
+}
+tick();
+setInterval(tick, 1000);
+
+async function loadVisits() {
+  try {
+    const placeId = '124289335708519';
+    const uniRes = await fetch('https://apis.roblox.com/universes/v1/places/' + placeId + '/universe');
+    const uniData = await uniRes.json();
+    const universeId = uniData.universeId;
+    if (!universeId) throw new Error('no universe');
+    const res = await fetch('https://games.roblox.com/v1/games?universeIds=' + universeId);
+    const data = await res.json();
+    if (data && data.data && data.data[0]) {
+      const visits = data.data[0].visits || 0;
+      const fmt = n => {
+        if (n >= 1000000) return (n / 1000000).toFixed(2) + 'M';
+        if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+        return n.toString();
+      };
+      document.getElementById('total-visits').textContent = visits.toLocaleString('tr-TR');
+      document.getElementById('game-views').textContent = '👁 ' + fmt(visits);
+    }
+  } catch(e) {
+    document.getElementById('total-visits').textContent = '—';
+    document.getElementById('game-views').textContent = '👁 —';
+  }
+}
+loadVisits();
+setInterval(loadVisits, 60000);
+
+
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('vis');
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+const pts = document.getElementById('pts');
+for (let i = 0; i < 20; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.style.left = Math.random() * 100 + '%';
+  p.style.top = Math.random() * 100 + '%';
+  p.style.width = (2 + Math.random() * 3) + 'px';
+  p.style.height = p.style.width;
+  p.style.animationDuration = (7 + Math.random() * 10) + 's';
+  p.style.animationDelay = (Math.random() * 8) + 's';
+  p.style.opacity = 0.1 + Math.random() * 0.2;
+  pts.appendChild(p);
+}
+</script>
+</body>
+</html>
